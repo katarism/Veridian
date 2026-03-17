@@ -58,16 +58,16 @@ chmod +x setup.sh && ./setup.sh
 编辑 `market_config.md`，填写你的市场参数：
 
 ```yaml
-market_name: "日本SIer市場"
+market_name: "日本SIer市场"
 local_perspective_label: "JP"
 target_companies:
   - NEC
   - 富士通
   - 日立
 analysis_angles:
-  A: "市場構造——誰が何のセグメントを占めるか、顧客依存度、競合格局"
-  B: "転換程度——受託→サービス転換はどこまで進んでいるか"
-  C: "財務パフォーマンス——各社の収益性/成長率の比較"
+  A: "市场结构——谁占据哪些细分市场、客户依赖度、竞争格局"
+  B: "转型程度——外包→服务化转型进展如何"
+  C: "财务表现——各公司盈利能力/增长率对比"
 ```
 
 ### 4. 启动 Claude Code，开始提问
@@ -76,7 +76,7 @@ claude
 ```
 
 向 orchestrator 提问，例如：
-> 「NEC と富士通のクラウド転換戦略を比較分析してください」
+> 「请对NEC与富士通的云转型战略进行比较分析」
 
 orchestrator 会首先向你确认分析角度，再开始材料收集。
 

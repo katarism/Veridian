@@ -58,4 +58,6 @@ else
 fi
 
 echo ""
-echo "Setup complete. Run 'claude' to start the workbench."
+echo "Setup complete. Launching Claude to guide you through configuration..."
+echo ""
+claude "You are setting up the Market Research Workbench. Read market_config.md, then guide the user through configuring it interactively — ask one section at a time: market name and local perspective label, target companies, analysis angles (A/B/C), primary and secondary sources, and non-listed companies. After each answer, write the updated values into market_config.md. Once all fields are filled, confirm the config is ready and invite the user to ask their first research question."

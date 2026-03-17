@@ -52,30 +52,15 @@ cd Veridian
 ```bash
 chmod +x setup.sh && ./setup.sh
 ```
-自动检测 `pdftotext` 是否已安装，缺失时按系统类型自动安装。
+自动检测 `pdftotext` 是否已安装，缺失时按系统类型自动安装，完成后自动启动 Claude。
 
-### 3. 配置目标市场
-编辑 `market_config.md`，填写你的市场参数：
+### 3. 配置 + 开始分析——Claude 引导你完成配置
+Claude 启动后会以对话方式逐项引导你填写配置：
+- 你想分析哪个市场？
+- 目标公司是哪些？
+- 最关心哪些分析角度？
 
-```yaml
-market_name: "日本SIer市场"
-local_perspective_label: "JP"
-target_companies:
-  - NEC
-  - 富士通
-  - 日立
-analysis_angles:
-  A: "市场结构——谁占据哪些细分市场、客户依赖度、竞争格局"
-  B: "转型程度——外包→服务化转型进展如何"
-  C: "财务表现——各公司盈利能力/增长率对比"
-```
-
-### 4. 启动 Claude Code，开始提问
-```bash
-claude
-```
-
-向 orchestrator 提问，例如：
+你回答后，Claude 自动将内容写入 `market_config.md`。配置完成后，直接提出你的第一个研究问题：
 > 「请对NEC与富士通的云转型战略进行比较分析」
 
 orchestrator 会首先向你确认分析角度，再开始材料收集。

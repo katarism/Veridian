@@ -59,33 +59,18 @@ cd Veridian
 ```bash
 chmod +x setup.sh && ./setup.sh
 ```
-This checks for `pdftotext` and installs it automatically if missing.
+This checks for `pdftotext`, installs it if missing, then automatically launches Claude.
 
-### 3. Configure your target market
-Edit `market_config.md` with your market parameters:
+### 3. Configure and start — Claude guides you through setup
+Claude will open an interactive session and ask you one section at a time:
+- What market do you want to analyze?
+- Which companies are your targets?
+- What analysis angles matter most?
 
-```yaml
-market_name: "US SaaS"
-local_perspective_label: "US"
-target_companies:
-  - Salesforce
-  - ServiceNow
-  - Workday
-analysis_angles:
-  A: "Market structure — who owns which segments, customer concentration, competitive dynamics"
-  B: "Land-and-expand vs. enterprise-first strategic divergence"
-  C: "Financial performance — revenue growth and profitability comparison"
-```
-
-### 4. Start Claude Code and ask a question
-```bash
-claude
-```
-
-Ask the orchestrator a question, for example:
+After you answer, Claude writes the values into `market_config.md` for you. Once configuration is complete, ask your first research question:
 > "Compare the cloud transition strategies of Salesforce and ServiceNow."
 
-The orchestrator will first confirm the analysis angle, then begin material collection.
+The orchestrator will confirm the analysis angle, then begin material collection.
 
 ---
 

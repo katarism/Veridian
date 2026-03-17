@@ -1,0 +1,17 @@
+## Raw materials (contains proprietary company PDFs)
+raw_materials/
+
+## Analysis output (contains specific analysis conclusions)
+output/
+
+## Runtime state files
+material_status.md
+material_status_v2.md
+
+## Local IDE and system files
+.DS_Store
+.obsidian/
+*.DS_Store
+
+## Local Claude Code settings
+.claude/settings.local.json

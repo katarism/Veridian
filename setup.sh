@@ -60,4 +60,28 @@ fi
 echo ""
 echo "Setup complete. Launching Claude to guide you through configuration..."
 echo ""
-claude "You are setting up the Market Research Workbench. Read market_config.md, then guide the user through configuring it interactively — ask one section at a time: market name and local perspective label, target companies, analysis angles (A/B/C), primary and secondary sources, and non-listed companies. After each answer, write the updated values into market_config.md. Once all fields are filled, confirm the config is ready and invite the user to ask their first research question."
+claude "You are setting up the Market Research Workbench. Follow these steps in order:
+
+STEP 1 — Configure market_config.md:
+Read market_config.md, then guide the user through configuring it interactively — ask one section at a time: market name and local perspective label, target companies, analysis angles (A/B/C), primary and secondary sources, and non-listed companies. After each answer, write the updated values into market_config.md. Once all fields are filled, confirm the config is complete.
+
+STEP 2 — Capture first research question:
+Ask the user for their first research question (or recognize it if they have already stated one during this conversation). Wait for a clear question before proceeding.
+
+STEP 3 — Confirm analysis angle:
+Read the analysis_angles from market_config.md and present them to the user. Ask the user to select one angle (A/B/C/D) or describe their own. Wait for confirmation.
+
+STEP 4 — Write material_status.md with confirmed state:
+Once the user has confirmed an angle, write a new file called material_status.md in the working directory with the following content (fill in the actual values):
+
+current_phase: frame_confirmed
+human_confirmed: false
+confirmed_at: null
+last_updated: {current datetime}
+analyst_version: null
+analysis_frame: \"{the angle the user confirmed}\"
+analysis_frame_confirmed: true
+structural_gaps: []
+
+STEP 5 — Hand off to orchestrator:
+Tell the user: 'Configuration complete. Starting analysis...' Then invoke the orchestrator sub-agent with this instruction: 'The analysis frame has already been confirmed by the user during setup. analysis_frame_confirmed is true in material_status.md. The user's research question is: {the question from Step 2}. Skip frame confirmation (Step 0b) and proceed directly to Stage 1: material collection.'"

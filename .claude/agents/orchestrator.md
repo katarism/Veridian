@@ -30,11 +30,15 @@ Please install it and restart:
 Or run the included setup script:  ./setup.sh
 ```
 
-### Step 0b: Read market config
+### Step 0b: Read market config + check frame confirmation status
 **Read `market_config.md` to get the `analysis_angles` field.**
 If `market_config.md` does not exist, stop immediately and report: "Please create market_config.md before starting analysis."
 
-Each time you receive a new analysis question, **before calling any agent**, read `analysis_angles` from `market_config.md`, then output the following format and wait for human confirmation:
+**Before presenting the frame confirmation prompt, check `material_status.md`:**
+- If `material_status.md` exists and `analysis_frame_confirmed: true`, skip the frame confirmation prompt entirely and proceed directly to Stage 1 using the `analysis_frame` value already recorded in `material_status.md`.
+- Only present the frame confirmation prompt if `analysis_frame_confirmed` is `false` or `material_status.md` does not exist.
+
+If frame confirmation is needed: read `analysis_angles` from `market_config.md`, then output the following format and wait for human confirmation:
 
 ```
 [Frame Confirmation]
@@ -46,7 +50,7 @@ Please confirm the analysis angle (select one or describe your own):
 After confirmation, I will use this as the framework to begin material collection.
 ```
 
-After receiving human confirmation, write the user's choice to the `analysis_frame` field in `material_status.md`, **then** proceed to Stage 1.
+After receiving human confirmation, write the user's choice to the `analysis_frame` field in `material_status.md` and set `analysis_frame_confirmed: true`, **then** proceed to Stage 1.
 
 ## On Every Startup
 

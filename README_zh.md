@@ -44,7 +44,7 @@
 
 ### 1. 克隆项目
 ```bash
-git clone https://github.com/YOUR_USERNAME/market-research-workbench.git
+git clone https://github.com/katarism/Veridian.git
 cd market-research-workbench
 ```
 

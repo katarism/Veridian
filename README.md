@@ -52,7 +52,7 @@ Human question
 ### 1. Clone the repo
 ```bash
 git clone https://github.com/katarism/Veridian.git
-cd market-research-workbench
+cd Veridian
 ```
 
 ### 2. Run setup

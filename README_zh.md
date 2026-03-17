@@ -45,7 +45,7 @@
 ### 1. 克隆项目
 ```bash
 git clone https://github.com/katarism/Veridian.git
-cd market-research-workbench
+cd Veridian
 ```
 
 ### 2. 运行 setup

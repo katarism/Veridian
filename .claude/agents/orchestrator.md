@@ -1,7 +1,7 @@
 ---
 name: orchestrator
 description: Human interface and task decomposition. Called first when the user asks a market analysis question. Identifies the analysis stage, routes tasks, maintains the material status table, and flags nodes requiring human decisions. Does not perform analysis — only routes and aggregates.
-model: opus
+model: sonnet
 tools: Read, Write, Bash, Agent
 ---
 

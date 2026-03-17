@@ -1,7 +1,7 @@
 ---
 name: materials-strategist
 description: Materials sourcing strategy and quality rating expert. Defines the search strategy before web-researcher fetches, and rates each material after fetching. Distinguishes local vs. global perspective.
-model: opus
+model: sonnet
 tools: Read, Write, Bash
 disallowedTools: WebFetch, WebSearch
 ---

@@ -134,6 +134,33 @@ After receiving human confirmation, update `material_status.md`:
 - `confirmed_at: {timestamp}`
 - `current_phase: analysis_ready`
 
+## 时效性验证节点（Time-Sensitive Verification — Required Before Calling Analyst）
+
+**在 `human_confirmed: true` 之后、调用 analyst 之前，执行以下检查：**
+
+读取 `material_status.md` 中的 `time_sensitive_flags` 字段：
+
+- 若 `time_sensitive_flags` 为空列表或字段不存在 → 直接进入分析阶段
+- 若存在一条或多条 flag → **停止，向人类输出以下格式，等待确认：**
+
+```
+[时效性风险确认] 材料中存在以下待确认事实，请在分析开始前核实当前状态：
+
+⏳ 时效性风险项：
+- 材料：{material filename}
+  声明："{claim 原文}"
+  类型：{flag_type}
+  材料日期：{material_date}
+  → 请确认此事件当前状态是否仍然有效？
+
+请回复：
+- "已确认，状态未变" → analyst 将以材料原文为准进行分析
+- "状态已变更：[说明]" → 请提供最新情况，analyst 将以更新后的信息为准
+- "忽略，继续分析" → analyst 将在引用处标注时效性风险
+```
+
+收到人类回复后，将确认结果写入 `material_status.md` 的 `time_sensitive_flags` 对应条目（添加 `human_verification` 字段），然后继续调用 analyst。
+
 ## Human Decision Nodes (Must Explicitly Stop)
 Stop the process and present the situation to the human in these cases:
 

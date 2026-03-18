@@ -72,6 +72,30 @@ For each target company, guide the researcher in this order (adjust per market):
 3. Official stock exchange disclosure filings
 4. Specialist media listed in `secondary_sources`
 
+## 时效性风险标记（Time-Sensitive Material Flag）
+
+在完成材料评级后，扫描全部材料，识别以下类型的时效性内容：
+- 正在进行中的 M&A 交易（"pending acquisition"、"expected to close"、"under review by regulators"）
+- 待监管批准事项
+- 融资轮次传闻（非已完成交易）
+- 人事变动公告（创始人离职、新任 CEO 等，尚未生效）
+
+对每一处时效性风险内容，在 `material_status.md` 中添加专门的 `time_sensitive_flags` 字段：
+
+```yaml
+time_sensitive_flags:
+  - material: {filename}
+    claim: "{原文摘录，尽量简短}"
+    flag_type: pending_ma | pending_regulatory | funding_rumor | personnel_change
+    material_date: {材料发布日期，如已知}
+    verification_note: "分析前应人工确认此事件当前状态"
+```
+
+若无时效性风险内容，写入：
+```yaml
+time_sensitive_flags: []
+```
+
 ## Output Format
 After each rating, output the material list. **Key page annotations are required** (so analyst can read precisely without scanning the full document):
 

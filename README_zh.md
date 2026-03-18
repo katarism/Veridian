@@ -104,8 +104,8 @@ orchestrator 会首先向你确认分析角度，再开始材料收集。
 
 | Agent | 模型 | 职责 | 可用工具 |
 |-------|------|------|---------|
-| orchestrator | opus | 接收问题、分解任务、路由、维护状态表 | Read, Write, Bash |
-| materials-strategist | opus | 制定搜索策略、对材料质量评级（★1–5） | Read, Write, Bash |
+| orchestrator | sonnet | 接收问题、分解任务、路由、维护状态表 | Read, Write, Bash |
+| materials-strategist | sonnet | 制定搜索策略、对材料质量评级（★1–5） | Read, Write, Bash |
 | web-researcher | haiku | 执行搜索和抓取、PDF转文本 | WebFetch, WebSearch, Write, Read |
 | analyst | opus | 三段式分析（insight → 假设 → 投资人问答） | Read, Write |
 | evidence-auditor | sonnet | 验证每条推断的材料支撑 | Read, Write |

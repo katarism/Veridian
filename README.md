@@ -111,8 +111,8 @@ The orchestrator will confirm the analysis angle, then begin material collection
 
 | Agent | Model | Role | Tools |
 |-------|-------|------|-------|
-| orchestrator | opus | Receives questions, decomposes tasks, routes, maintains state | Read, Write, Bash |
-| materials-strategist | opus | Search strategy, quality rating (★1–5) | Read, Write, Bash |
+| orchestrator | sonnet | Receives questions, decomposes tasks, routes, maintains state | Read, Write, Bash |
+| materials-strategist | sonnet | Search strategy, quality rating (★1–5) | Read, Write, Bash |
 | web-researcher | haiku | Fetch execution, PDF-to-text conversion | WebFetch, WebSearch, Write, Read |
 | analyst | opus | Three-part analysis: insight → hypotheses → investor Q&A | Read, Write |
 | evidence-auditor | sonnet | Verifies evidence support for each inference | Read, Write |

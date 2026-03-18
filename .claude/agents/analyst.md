@@ -52,11 +52,24 @@ For each hypothesis, include:
 - The conditions that would falsify it
 - How far away falsification currently is
 
-### Stage 3: Five Questions a Top Investor Would Ask to Challenge This Business Model — Answered Using Only the Collected Documents
+**When the analysis frame has named angles (read from `material_status.md`):**
+- Organize the three hypotheses so each one directly addresses one angle (e.g. if frame is A+B+C, Hypothesis 1 → A, Hypothesis 2 → B, Hypothesis 3 → C)
+- The hypothesis must be a structural claim about the MARKET, not a prediction about an individual player's trajectory
+- Player data (market share, pricing, retention) serves as evidence for the structural claim — it is not the claim itself
+
+### Stage 3: Five Questions a Challenger Investor Would Ask to Evaluate Whether a New Entrant Can Win in This Market — Answered Using Only the Collected Documents
+
+The investor's perspective: they are evaluating an investment in a new entrant or challenger product, not in an incumbent. Their questions should probe the structural conditions that make market entry viable or blocked:
+- Where are the structural gaps that incumbents cannot plug?
+- What switching conditions exist that a challenger could trigger?
+- What would need to be true about the market for a new entrant to gain durable share?
+
 For each question, include:
-- How the investor would ask it (angle must be sharp, targeting business model weaknesses)
+- How the investor would ask it (angle must be sharp, probing market structure's openness to disruption)
 - How completely current materials can answer it
 - Evidence quality annotation (using the standardized format)
+
+Note: Incumbents' weaknesses are relevant only as evidence for structural opportunity — not as the question itself. The investor's POV is a challenger investor assessing the market's openness to disruption — not a VC evaluating an existing incumbent.
 
 ## Q&A Mode
 

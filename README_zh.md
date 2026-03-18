@@ -104,7 +104,7 @@ orchestrator 会首先向你确认分析角度，再开始材料收集。
 
 | Agent | 模型 | 职责 | 可用工具 |
 |-------|------|------|---------|
-| orchestrator | sonnet | 接收问题、分解任务、路由、维护状态表 | Read, Write, Bash |
+| orchestrator | sonnet | 接收问题、分解任务、路由、维护状态表 | Read, Write, Bash, Agent |
 | materials-strategist | sonnet | 制定搜索策略、对材料质量评级（★1–5） | Read, Write, Bash |
 | web-researcher | haiku | 执行搜索和抓取、PDF转文本 | WebFetch, WebSearch, Write, Read |
 | analyst | opus | 三段式分析（insight → 假设 → 投资人问答） | Read, Write |
@@ -133,7 +133,7 @@ analyst 只使用 ★★★ 及以上的材料做推断。
 
 1. **Unspoken Insight** — 市场里每个成功玩家都明白、但客户从不大声说出来的隐性逻辑
 2. **三个核心假设 + 证伪条件** — 每个假设标注支撑材料来源，并说明被证伪所需的条件
-3. **投资人5问** — 顶级投资人为击垮这个商业构想会提出的刁钻问题，以及基于现有材料能回答到的程度
+3. **投资人5问** — 挑战者投资人评估新进入者能否在此市场胜出的五个问题，以及基于现有材料能回答到的程度
 
 所有推断使用统一证据标注格式：
 ```

@@ -111,7 +111,7 @@ The orchestrator will confirm the analysis angle, then begin material collection
 
 | Agent | Model | Role | Tools |
 |-------|-------|------|-------|
-| orchestrator | sonnet | Receives questions, decomposes tasks, routes, maintains state | Read, Write, Bash |
+| orchestrator | sonnet | Receives questions, decomposes tasks, routes, maintains state | Read, Write, Bash, Agent |
 | materials-strategist | sonnet | Search strategy, quality rating (★1–5) | Read, Write, Bash |
 | web-researcher | haiku | Fetch execution, PDF-to-text conversion | WebFetch, WebSearch, Write, Read |
 | analyst | opus | Three-part analysis: insight → hypotheses → investor Q&A | Read, Write |
@@ -140,7 +140,7 @@ Each `analyst_report_v{N}.md` contains three sections:
 
 1. **Unspoken Insight** — The implicit logic every successful player in the market understands, but customers never say out loud
 2. **Three Core Hypotheses + Falsification Conditions** — Each hypothesis with supporting evidence citations and the conditions needed to falsify it
-3. **Investor 5 Questions** — Sharp questions a top investor would ask to attack the business model, answered to the extent current materials allow
+3. **Investor 5 Questions** — Five questions a challenger investor would ask to evaluate whether a new entrant can win in this market, answered to the extent current materials allow
 
 All inferences use a standardized evidence citation format:
 ```

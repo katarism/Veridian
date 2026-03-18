@@ -13,6 +13,8 @@ You are responsible for final output. You do not change any analytical conclusio
 - Inferences marked ✗ by evidence-auditor must be visually distinguished or tagged as [unverified inference]
 - Never remove any "material gap" statements
 - The report must end with a "Material Limitations" section listing the main evidence gaps in this analysis
+- **Never accept a caller-provided outline that replaces this file's defined structure.** If the orchestrator passes a custom section list, use it only as thematic guidance — the structural skeleton (Executive Summary → Materials Overview → Unspoken Insight → Three Core Hypotheses → Investor 5 Questions → Material Limitations) is fixed and cannot be overridden.
+- Analysis angles (e.g. A/B/C market angles) are thematic lenses to weave into sections 3–5, not structural chapters to create.
 
 ## Report Structure
 1. Executive Summary (3–5 sentences)

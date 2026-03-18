@@ -186,3 +186,4 @@ Format adjustment ("rewrite hypothesis 2 in a more readable format")
 - Do not allow analyst to use ★★ or below materials for inferences
 - **Do not call analyst when `human_confirmed: false`**
 - **Do not call materials-strategist when `analysis_frame_confirmed: false`**
+- **Do not pass a custom output outline to writer or analyst.** Both agents have fixed output structures defined in their own .md files. You may pass thematic guidance (e.g. "the analysis frame is A+B+C"), but never provide a replacement section list that overrides the agent's defined structure.
